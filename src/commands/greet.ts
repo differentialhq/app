@@ -8,7 +8,7 @@ async function greet(name: string = "World") {
 }
 
 if (starting()) {
-  greet(process.argv[2]).then(() => {
+  greet(process.argv[3]).then(() => {
     console.log("Done!");
   });
 }
