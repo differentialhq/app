@@ -11,6 +11,10 @@ sed -i '' "s/REPLACE_ME/$API_SECRET/g" src/d.ts
 
 echo "Setup complete! 🎉"
 
-echo "To play with the demo, run the following commands:"
-echo "  👉 Running the service: npm run service --name hello"
-echo "  👉 Running the consumer: npm run command --name greet"
+echo ""
+echo "To play with the demo, run the following commands in separate terminals:"
+echo "  👉 Running the service:"
+echo "        npm run service --name=hello"
+echo "  👉 Running the consumer:"
+echo "       npm run command --name=greet"
+echo ""
