@@ -21,11 +21,19 @@ npm install
 2. Run the service
 
 ```bash
-npm run service --name=hello # executes ./src/services/hello.ts
+npm run service --name=hello --start # executes ./src/services/hello.ts
 ```
 
 3. Call the service
 
 ```bash
-npm run command --name=greet # executes ./src/commands/greet.ts
+npm run command --name=greet --start # executes ./src/commands/greet.ts
 ```
+
+## Running the tests
+
+```bash
+npm test
+```
+
+See [hello.test.ts](./src/services/hello.test.ts) for an example of how to write service tests. This example uses `node:test`, but you can use any test runner you like.
