@@ -2,8 +2,10 @@ import { d } from "../d";
 import type { helloService } from "../services/hello";
 import { starting } from "../utls/cmd";
 
+const helloClient = d.buildClient<typeof helloService>();
+
 async function greet(name: string = "World") {
-  const result = await d.call<typeof helloService, "hello">("hello", name);
+  const result = await helloClient.hello(name);
   console.log(`Received response: ${result}`);
 }
 
