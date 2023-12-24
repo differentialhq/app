@@ -2,7 +2,7 @@ import { d } from "../d";
 import type { helloService } from "../services/hello";
 import { starting } from "../utls/cmd";
 
-const helloClient = d.buildClient<typeof helloService>();
+const helloClient = d.client<typeof helloService>("hello");
 
 async function greet(name: string = "World") {
   const result = await helloClient.hello(name);
