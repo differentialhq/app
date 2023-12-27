@@ -1,8 +1,8 @@
 import process from "process";
 import { d } from "../d";
 
-async function hello(from: string) {
-  return `Hello ${from}! I'm a service running on pid ${process.pid}!`;
+async function hello(name: string) {
+  return `Hello, ${name}!`;
 }
 
 export const helloService = d.service({
