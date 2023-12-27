@@ -1,9 +1,7 @@
-import { d } from "../d";
 import process from "process";
-import { starting } from "../utls/cmd";
+import { d } from "../d";
 
 async function hello(from: string) {
-  console.log("Responding to hello request");
   return `Hello ${from}! I'm a service running on pid ${process.pid}!`;
 }
 
