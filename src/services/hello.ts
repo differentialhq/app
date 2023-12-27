@@ -1,4 +1,3 @@
-import process from "process";
 import { d } from "../d";
 
 async function hello(name: string) {
@@ -12,4 +11,6 @@ export const helloService = d.service({
   },
 });
 
-helloService.start();
+helloService.start().then(() => {
+  console.log("Hello service started!");
+});
