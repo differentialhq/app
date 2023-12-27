@@ -1,7 +1,7 @@
 import { d } from "../d";
 
-async function hello({ name, processId }: { name: string; processId: string }) {
-  return `Hello, ${name} from ${processId}!`;
+async function hello(name: string) {
+  return `Hello, ${name}!`;
 }
 
 export const helloService = d.service({
