@@ -14,12 +14,4 @@ export const helloService = d.service({
   },
 });
 
-if (starting()) {
-  helloService.start().then(() => {
-    console.log(`Hello service started on pid ${process.pid}!`);
-  });
-
-  process.on("beforeExit", () => {
-    helloService.stop();
-  });
-}
+helloService.start();
