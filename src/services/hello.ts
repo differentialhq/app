@@ -1,6 +1,6 @@
 import { d } from "../d";
 
-async function hello(name: string) {
+async function hello({ name }: { name: string }) {
   return `Hello, ${name}!`;
 }
 
