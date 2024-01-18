@@ -1,6 +1,5 @@
 import { d } from "../d";
 import process from "process";
-import { starting } from "../utls/cmd";
 
 async function hello(from: string) {
   console.log("Responding to hello request");
@@ -13,13 +12,3 @@ export const helloService = d.service({
     hello,
   },
 });
-
-if (starting()) {
-  helloService.start().then(() => {
-    console.log(`Hello service started on pid ${process.pid}!`);
-  });
-
-  process.on("beforeExit", () => {
-    helloService.stop();
-  });
-}
