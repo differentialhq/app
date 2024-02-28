@@ -1,8 +1,5 @@
-rm -rf speedrun-app
+npm run setup
 
-git clone git@github.com:differentialhq/app.git speedrun-app && \
-cd speedrun-app && \
-npm run setup && \
 npm i -g tsx
 
 tsx src/run/hello-service.ts &
