@@ -15,19 +15,22 @@ This is a scaffold for a Differential app. It includes a few things:
 1. Install dependencies
 
 ```bash
-npm install
+git clone git@github.com:differentialhq/app.git my-app && \ 
+cd my-app && \ 
+npm run setup && \
+npm i -g tsx
 ```
 
 2. Run the service
 
 ```bash
-npm run service --name=hello --start # executes ./src/services/hello.ts
+tsx src/run/hello-service.ts
 ```
 
 3. Call the service
 
 ```bash
-npm run command --name=greet --start # executes ./src/commands/greet.ts
+tsx src/commands/greet.ts
 ```
 
 ## Running the tests

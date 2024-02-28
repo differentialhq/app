@@ -6,8 +6,6 @@
   "type": "module",
   "scripts": {
     "test": "node --import tsx --test src/**/*.test.ts",
-    "service": "tsx src/services/$npm_config_name.ts --start",
-    "command": "tsx src/commands/$npm_config_name.ts --start",
     "setup": "./scripts/setup.sh"
   },
   "repository": {
