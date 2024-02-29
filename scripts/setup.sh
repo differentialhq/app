@@ -6,11 +6,8 @@ npm install
 echo "Obtaining API secret..."
 API_SECRET=$(curl https://api.differential.dev/demo/token)
 
-# replace the API_SECRET with the string REPLACE_ME in src/d.ts file.
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  sed -i "s/REPLACE_ME/$API_SECRET/g" src/d.ts
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-  sed -i '' "s/REPLACE_ME/$API_SECRET/g" src/d.ts
-fi
+# tired of making sed work on both mac and linux
+echo "Setting API secret..."
+SECRET=$API_SECRET node scripts/replace-secret.cjs
 
 echo "Setup complete! 🎉"

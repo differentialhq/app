@@ -6,7 +6,7 @@ npm i -g tsx
 
 tsx src/run/hello-service.ts &
 
-output=$(tsx src/commands/greet.ts)
+output=$(DEBUG=* tsx src/commands/greet.ts)
 
 echo $output
 
