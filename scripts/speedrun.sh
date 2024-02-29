@@ -1,3 +1,5 @@
+set -eux
+
 npm run setup
 
 npm i -g tsx
