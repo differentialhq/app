@@ -8,6 +8,12 @@ async function greet(name: string = "World") {
   console.log(`Received response: ${result}`);
 }
 
-greet(process.argv[3]).then(() => {
-  console.log("Done!");
-});
+greet(process.argv[3])
+  .then(() => {
+    console.log("Done!");
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
